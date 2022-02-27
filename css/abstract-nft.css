@@ -1,7 +1,3 @@
-/*
-Tooplate 2119 Gymso Fitness
-https://www.tooplate.com/view/2119-gymso-fitness
-*/
 
 
 
@@ -393,21 +389,6 @@ border-radius: 2px 2px 0 0;
 color: var(--gray-color);
 }
 
-.class-price {
-background: var(--primary-color);
-border-radius: var(--border-radius-large);
-color: var(--white-color);
-font-weight: var(--font-weight-bold);
-display: block;
-position: absolute;
-top: 2rem;
-right: 2rem;
-width: 3.5rem;
-height: 3.5rem;
-line-height: 3.5rem;
-text-align: center;
-}
-
 
 /*---------------------------------------
  SCHEDULE             
@@ -415,62 +396,6 @@ text-align: center;
 
 .schedule {
 background: var(--dark-color);
-}
-
-.schedule-table {
-display: table;
-border: 0;
-text-align: center;
-}
-
-.schedule-table strong,
-.schedule-table span {
-display: block;
-text-align: center;
-}
-
-.schedule-table strong {
-color: var(--white-color);
-}
-
-.schedule-table span {
-color: var(--gray-color);
-}
-
-.schedule-table span,
-.schedule-table small {
-font-size: var(--menu-font-size);
-text-transform: uppercase;
-}
-
-.schedule-table small {
-position: relative;
-top: 10px;
-}
-
-.table .thead-light th,
-.schedule-table tr td:first-child {
-background: var(--primary-color);
-border: 1px solid #212122;
-color: var(--white-color);
-}
-
-.schedule-table .thead-light th {
-border-bottom: 0;
-text-transform: uppercase;
-}
-
-.table-bordered td, 
-.table-bordered th {
-border: 1px solid #212122;
-}
-
-.table-bordered td {
-padding-bottom: 22px;
-}
-
-.table td, .table th {
-padding: 1rem;
 }
 
 
@@ -541,51 +466,6 @@ font-weight: var(--font-weight-light);
 font-weight:300;
 font-size: var(--base-font-size);
 color: #b3b3b3;
-}
-
-/*---------------------------------------
- CONTACT              
------------------------------------------*/
-
-.webform input,
-button#submit-button {
-height: calc(2.25rem + 20px);
-}
-
-.form-control {
-border-radius: var(--border-radius-small);
-margin: 1.3rem 0;
-}
-
-.form-control:focus {
-box-shadow: none;
-border-color: var(--dark-color);
-}
-
-button#submit-button {
-background: var(--dark-color);
-border-color: transparent;
-color: var(--white-color);
-cursor: pointer;
-transition: all 0.3s ease;
-}
-
-button#submit-button:hover {
-background: var(--primary-color);
-}
-
-.contact h2 + p {
-max-width: 90%;
-}
-
-.google-map {
-border-top: 1px solid #efebeb;
-margin-top: 2.5rem;
-padding-top: 2.5rem;
-}
-
-.google-map iframe {
-width: 100%;
 }
 
 
