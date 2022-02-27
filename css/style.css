@@ -1,22 +1,83 @@
-.ml3 {
-  font-weight: 900;
-  font-size: 3.5em;
-  font-color: white;
-margin-left: auto;
-margin-right: auto;
-}
+/*
+*
+*preview 
+*
+*********************************/
 
-.ml1 {
-  font-weight: 600;
-  font-size: 1.8em;
-  color: #ff8501 ;
-}
+.wrapperpreview	 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
 
-.ml2 {
-  font-weight: 400;
-  font-size: 1.3em;
-  color: #c69839 ;
-}
+.wrapper {
+  display: flex;
+  width: 90%;
+  justify-content: space-around; }
+
+.card {
+  width: 240px;
+  height: 200px;
+  border-radius: 15px;
+  padding: 1.5rem;
+  background: white;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); }
+  .card:hover {
+    transform: translateY(20px); 
+	}
+    .card:hover:before {
+      opacity: 1; }
+    .card:hover .info {
+      opacity: 1;
+      transform: translateX(10px); }
+	.card:hover .explore {
+      opacity: 1;
+      transform: translateY(105px);
+	  color:white;	  }
+  .card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0; }
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px; }
+  .card .info {
+    position: relative;
+    z-index: 3;
+    color: red;
+    opacity: 0;
+    transform: translateY(80px);
+    transition: 0.5s; }
+	
+	.card .explore {
+    position: relative;
+    z-index: 3;
+    color: red;
+    opacity: 0;
+    transition: 0.5s; }
+    .card .info h1 {
+      margin: 0px; }
+
 
 /*
 *
@@ -24,10 +85,8 @@ margin-right: auto;
 *
 *********************************/
 :root {
-  --movie-width: 300px;
-  --movie-height: 300px;
-  --arrow-width: 50px;
-  --slider-py: 50px;
+  --movie-width: 250px;
+  --movie-height: 250px;
 }
 @media only screen and (max-width: 1000px) {
   :root {
@@ -52,33 +111,6 @@ margin-right: auto;
   text-align: center;
 }
 
-/*
-*
-* THE SLIDER containers
-*
-*********************************/
-.slider {
-  width: 100%;
-  overflow-x: scroll;
-  overflow-y: visible;
-  white-space: nowrap;
-  position: relative;
-  padding-top: var(--slider-py);
-  padding-bottom: var(--slider-py);  
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.slider::-webkit-scrollbar {
-    display: none;
-}
-
-@media only screen and (max-width: 900px) {
-  .btn-nav {
-    display: none!important;
-  }
-}
-
 
 /*
 *
@@ -91,13 +123,12 @@ margin-right: auto;
   display: inline-block;
   position: relative;
   color: white;
-  padding: 0 2px;
-  font-size: 0.8rem;
+  padding: 20px;
   transition: all 0.8s ease-in-out;
 }
 
-.movie:nth-of-type(1) {
-  margin-left: var(--arrow-width);
+.slider{
+	 text-align: center;
 }
 
 .movie img {
@@ -107,51 +138,13 @@ margin-right: auto;
   border-radius: 10px;
 }
 
-.description {
-  position: absolute;
-  display: none;
-  z-index: 9999;
-  background-color: #272727;
-  width: var(--movie-width);
-  margin-top: -10px;
-  padding: 10px 0;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
 @media only screen and (min-width: 900px) {
   .movie:hover {
     transform: scale(1.2);
     z-index: 2;
   }
 }
-/*
-*
-* BUTTONS
-*
-*********************************/
-.btn-nav {
-  width: var(--arrow-width);
-  height: var(--movie-height);
-  border-radius: 5px;
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  outline: none;
-  border: none;
-  color: white;
-  top: var(--slider-py);
-  z-index: 5;
-  visibility: hidden;
-}
 
-#moveLeft {
-  left: 0;
-}
-
-#moveRight {
-  right: 0;
-}
 	
 @media only screen and (min-width: 901px) {
   .containers:hover .btn-nav,
@@ -159,10 +152,6 @@ margin-right: auto;
     visibility: visible;
   }
 }
-
-/**************************
-Footer
-/********************************/
 
 
 /***********************************
